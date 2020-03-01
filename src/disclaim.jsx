@@ -11,10 +11,12 @@ class Refresh extends Component {
     }
 
     nxtPg(){
-        let nxtPage = this.state.pageNum +1;
-        this.setState({
-            pageNum: nxtPage
-        })
+        if(this.state.pageNum+1<2){
+            let nxtPage = this.state.pageNum +1;
+            this.setState({
+                pageNum: nxtPage
+            });
+        }
     }
 
     prevPg(){

@@ -78,6 +78,7 @@ export default class Survay extends Component{
     this.setState({
       inofrmation: data
     });
+    this.props.done();
 
 
     console.log(this.state.inofrmation)

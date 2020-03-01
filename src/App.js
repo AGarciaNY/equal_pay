@@ -11,21 +11,33 @@ let sampleData = {
 
 }
 
-function App() {
-  let info = false;
-  if(info){
-    return (
-      <div className="App">
-        <HomePage data="hello world"/>    
-      </div>
-    );
-  } else {
-    return (
-      //switch this out with the questionaire or survey
-      <div className="App">
-        <HomePage data="ervn"/>    
-      </div>
-    );
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state={
+      done: false
+    }
+  }
+
+  doneQuest(){
+    this.setState({
+      done: true
+    })
+  }
+  render(){      
+    if(this.state.done){
+      return (
+        <div className="App">
+          <HomePage data="hello world"/>    
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <Survay done={()=>this.doneQuest()}/>
+        </div>
+      );
+    }
   }
 }
 

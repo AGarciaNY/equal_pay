@@ -97,6 +97,14 @@ export default class Survay extends Component{
                   onChange={this.handleInputChange}/>
                   <datalist id="browsers">
                     <option value="Internet Explorer"/>
+                    <option value="male"/>
+                    <option value="male"/>
+                    <option value="Italian"/>
+                    <option value="english"/>
+                    <option value="christainity"/>
+                    <option value="male"/>
+                    <option value="visa"/>
+
                   </datalist>
               </form>
             </Formholder>

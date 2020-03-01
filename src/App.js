@@ -15,7 +15,8 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state={
-      done: false
+      done: false,
+      data: null
     }
   }
 
@@ -24,17 +25,23 @@ class App extends Component{
       done: true
     })
   }
+
+  getData(newData){
+    this.setState({
+      data:newData
+    })
+  }
   render(){      
     if(this.state.done){
       return (
         <div className="App">
-          <HomePage data="hello world"/>    
+          <HomePage data={this.state.data}/>    
         </div>
       );
     } else {
       return (
         <div className="App">
-          <Survay done={()=>this.doneQuest()}/>
+          <Survay getD={(nwdata)=>this.getData(nwdata)} done={()=>this.doneQuest()}/>
         </div>
       );
     }

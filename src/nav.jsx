@@ -11,14 +11,17 @@ class Nav extends Component {
     }
     render(){
         let styles = {
-            float: "left",
             backgroundColor: "lightBlue",
-            width: "100vw",
+            width: "100%",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+            marginTop: "-16px",
+            color: "#673AB7"
         }
         return (
-          <div style={styles} className="navbar">
-              <h1>Website</h1>          
-          </div>
+            <div style={styles}>
+                <h1>NYC PAY PARITY NOW</h1>  
+            </div>      
         );
     }
 }

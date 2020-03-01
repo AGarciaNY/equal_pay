@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import styled from '@emotion/styled';
 import questions from './questionlist';
 import questionkeys from './keys';
+import Nav from '../../nav';
 import './survay';
 
 const Questionholder = styled.div`
@@ -114,6 +115,7 @@ export default class Survay extends Component{
     }
     return(
       <div>
+        <Nav/>
         {questionlist}
         <Submit>
           <button onClick={()=> this.Submission()}>Submit</button>

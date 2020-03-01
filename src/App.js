@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{Component} from 'react';
+import Survay from './Components/survay/survay';
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './homePage';
@@ -6,7 +7,8 @@ import HomePage from './homePage';
 function App() {
   return (
     <div className="App">
-      <HomePage/>    
+      <Survay/>
+      <HomePage/>
     </div>
   );
 }
